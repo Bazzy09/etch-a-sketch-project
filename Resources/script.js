@@ -35,7 +35,7 @@ for (let i = 0; i < 256; i++) {
 }
 
 }
-function getsize() {
+function getSize() {
     let input = prompt("What will be the size of the container?");
     let message = document.querySelector(".message");
     if (input === null) {
@@ -51,11 +51,11 @@ function getsize() {
 }
 
 
-function colorsquare() {
+function colorSquare() {
     if (click) {
         if (color === "random") {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        } else {
+         } else {
             this.style.backgroundColor = 'black';
         }
     }
