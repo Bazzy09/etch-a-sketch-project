@@ -35,20 +35,21 @@ for (let i = 0; i < 256; i++) {
 }
 
 }
-function getsize(){
-    let input = prompt("what will be the size of the container?");
-    let message = document.querySelector("#message");
-    if(input == ""){
-        message.innerHTML = "please provide a number"
-    }
-    else if(input < 0 || input > 100){
-        message.innerHTML = "provide a number between 1 and 100"
-    }
-    else{
-        message.innerHTML = "Now you can play"
+function getsize() {
+    let input = prompt("What will be the size of the container?");
+    let message = document.querySelector(".message");
+    if (input === null) {
+        message.innerHTML = "No size provided. Please provide a number between 1 and 100.";
+    } else if (input === "") {
+        message.innerHTML = "Please provide a number.";
+    } else if (input < 1 || input > 100) {
+        message.innerHTML = "Provide a number between 1 and 100.";
+    } else {
+        message.innerHTML = "Now you can play.";
         return input;
     }
 }
+
 
 function colorsquare(){
     if(click){
@@ -65,7 +66,7 @@ function setColor(colorChoice){
     color = colorChoice;
 }
 
-function resetBoard(){
+function resetBoard() {
     let divs = document.querySelectorAll("div")
-    divs.forEach((div) => div.style.backgroundcolor = white)
+    divs.forEach((div) => div.style.backgroundColor = "white");
 }
